@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevTools Enhancer Panel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 16px;
+      background-color: #f9f9f9;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: #2c3e50;
+    }
+    
+    .tool-section {
+      background-color: white;
+      border-radius: 4px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    h2 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #34495e;
+    }
+    
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 8px;
+      font-size: 14px;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+    
+    .results {
+      margin-top: 16px;
+      padding: 12px;
+      background-color: #ecf0f1;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 14px;
+      max-height: 300px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>DevTools Enhancer</h1>
+  
+  <div class="tool-section">
+    <h2>DOM Inspector</h2>
+    <button id="inspectDOM">Inspect DOM Structure</button>
+    <button id="findDuplicateIDs">Find Duplicate IDs</button>
+    <div id="domResults" class="results" style="display: none;"></div>
+  </div>
+  
+  <div class="tool-section">
+    <h2>CSS Analyzer</h2>
+    <button id="findUnusedCSS">Find Unused CSS</button>
+    <button id="analyzeCSSSpecificity">Analyze Specificity</button>
+    <div id="cssResults" class="results" style="display: none;"></div>
+  </div>
+  
+  <div class="tool-section">
+    <h2>JavaScript Tools</h2>
+    <button id="findEventListeners">Find Event Listeners</button>
+    <button id="analyzeMemoryUsage">Analyze Memory Usage</button>
+    <div id="jsResults" class="results" style="display: none;"></div>
+  </div>
+  
+  <script src="devtools-panel.js"></script>
+</body>
+</html>

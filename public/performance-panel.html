@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance History</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 16px;
+      background-color: #f9f9f9;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: #2c3e50;
+    }
+    
+    .history-item {
+      background-color: white;
+      border-radius: 4px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .history-item h2 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #34495e;
+    }
+    
+    .history-item-date {
+      color: #7f8c8d;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+    }
+    
+    .resources {
+      margin-top: 8px;
+    }
+    
+    .resource {
+      padding: 4px 0;
+      border-bottom: 1px solid #ecf0f1;
+      font-size: 14px;
+    }
+    
+    .no-data {
+      text-align: center;
+      padding: 32px;
+      color: #7f8c8d;
+    }
+    
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+    
+    .actions {
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Performance History</h1>
+  
+  <div class="actions">
+    <button id="clearHistory">Clear History</button>
+    <button id="exportData">Export Data</button>
+  </div>
+  
+  <div id="historyContainer">
+    <div class="no-data">No performance data available yet. Analyze some pages first.</div>
+  </div>
+  
+  <script src="performance-panel.js"></script>
+</body>
+</html>
